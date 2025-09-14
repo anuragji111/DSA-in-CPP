@@ -3,4 +3,14 @@
 - Explanation included for better understanding.  
 - Continuing daily consistency 🚀
 
-index list of questions solved (Q1–Q7).
+## Question 8 - Array Insertion
+This program demonstrates array insertion by shifting elements to the right.
+
+**Concept:**  
+In array insertion, if we want to insert an element at a specific index, all elements from that index to the end must be shifted by one position.
+
+**Steps:**
+1. Take size and elements as input.
+2. Take index and value.
+3. Shift elements to the right.
+4. Insert new value at given index.
