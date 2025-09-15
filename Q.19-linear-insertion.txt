@@ -1,0 +1,93 @@
+// Q18. Write a C++ program to perform linear insertion in a singly linked list.
+// The program should allow the user to:
+
+// Insert n elements at the end of the linked list.
+
+// Display the linked list before insertion.
+
+// Insert a new node after a specified value in the linked list.
+
+// Display the linked list after insertion.
+
+
+#include <iostream>
+using namespace std;
+
+struct Node {
+    int data;
+    Node* next;
+};
+
+Node* head = nullptr;
+
+// Insert node at the end of the linked list
+void insertAtEnd(int value) {
+    Node* newNode = new Node;
+    newNode->data = value;
+    newNode->next = nullptr;
+
+    if (head == nullptr) {
+        head = newNode;
+    } else {
+        Node* temp = head;
+        while (temp->next != nullptr) {
+            temp = temp->next;
+        }
+        temp->next = newNode;
+    }
+}
+
+// Insert node after a given value
+void insertAfterValue(int value, int afterValue) {
+    Node* temp = head;
+    while (temp != nullptr && temp->data != afterValue) {
+        temp = temp->next;
+    }
+    if (temp == nullptr) { 
+        cout << "Value " << afterValue << " not found in the list." << endl;
+        return;
+    }
+
+    Node* newNode = new Node;
+    newNode->data = value;
+    newNode->next = temp->next;
+    temp->next = newNode;
+}
+
+// Display linked list
+void display() {
+    Node* temp = head;
+    while (temp != nullptr) {
+        cout << temp->data << " ";
+        temp = temp->next;
+    }
+    cout << endl;
+}
+
+int main() {
+    int n, value, afterValue, newValue;
+
+    cout << "Enter the number of elements to insert: ";
+    cin >> n;
+
+    for (int i = 0; i < n; i++) {
+        cout << "Enter value for node " << i + 1 << ": ";
+        cin >> value;
+        insertAtEnd(value);
+    }
+
+    cout << "Linked list before insertion: ";
+    display();
+
+    cout << "Enter the value after which to insert: ";
+    cin >> afterValue;
+    cout << "Enter the new value to insert: ";
+    cin >> newValue;
+
+    insertAfterValue(newValue, afterValue);
+
+    cout << "Linked list after insertion: ";
+    display();
+
+    return 0;
+}

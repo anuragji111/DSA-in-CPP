@@ -81,24 +81,3 @@ Time complexity: O(n) in the worst case.
 This operation is the basis for advanced data structures.
 
 
----
-
-# 🚀 GitHub Push Commands
-
-Now, to add & push this file:
-
-```bash
-# Navigate to your repo
-cd "A:/anu/BTECH-CSE-LET/Anurag 1st sem-BTECH/SUBJECTS/CSE205 - DATA STRUCTURES AND ALGORITHMS/CLASS-PROGRAMS"
-
-# Create the markdown file
-echo "" > array_insertion.md   # (or just create manually and paste above content)
-
-# Stage the file
-git add array_insertion.md
-
-# Commit with message
-git commit -m "Added documentation: Array Insertion explanation and code (Q8)"
-
-# Push to GitHub
-git push
