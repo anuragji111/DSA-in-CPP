@@ -14,3 +14,11 @@ In array insertion, if we want to insert an element at a specific index, all ele
 2. Take index and value.
 3. Shift elements to the right.
 4. Insert new value at given index.
+
+-- Before Deletion (index = 2):
+[10, 20, 30, 40, 50]
+
+Shift left:
+[10, 20, 40, 50]
+
+Size = 4
